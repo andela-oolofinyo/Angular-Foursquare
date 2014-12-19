@@ -28,5 +28,4 @@ var app = angular.module('foursquare', []);
       return $http.get(url, {params: { query: searchval } });
     };
     return foursquareItems;
-
   }]);

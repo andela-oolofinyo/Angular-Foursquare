@@ -15,7 +15,7 @@ body{
   margin: 0 auto;
   text-align: center;
   line-height: 0.3em;
-  color:white;/*#582A72;*/
+  color:white;
   font-size: 5em;
   font-family: 'Roboto Slab', serif;
 }
@@ -25,6 +25,7 @@ section img {
   height: 4%;
   width:auto; 
 }
+
 /*
 ======================================================
 
@@ -53,14 +54,17 @@ section img {
   border: 1px solid #dddddd;
 }
 
-#search:focus, #search:hover{
-  background:rgba(255, 255, 255, 0.8);/*#188bc4;*/
+#search:focus{
+  background:rgba(255, 255, 255, 0.8);
   color: black;
   border:1px solid #0f95d3;
 }
 
+#submit, #submit:hover{
+   background:#188bc4;
+}
+
 #submit{
-  background:#188bc4;
   color: #e6e6e6;
   width: 8%;
   border-radius: 2%;
@@ -68,28 +72,26 @@ section img {
 }
 
 #submit:hover{
-  background:#188bc4;
   color:white;
   font-weight: 900;
   border: 2px solid #0f95d3;
   border-radius: 8px;
 }
 
-footer .rightattr{
+footer .rightattr, footer .leftattr{
   height: 5em;
   width: auto;
   margin: 0 auto;
+}
+
+footer .rightattr{
   float: right;
   border: 3px solid #0f95d3;
-  border-radius: 100%
+  border-radius: 100%;
 }
 
 footer .leftattr{
-  height: 5em;
-  width: auto;
-  margin: 0 auto;
   float: left;
-  border-radius: 100%
 }
 
 
@@ -107,13 +109,15 @@ footer .leftattr{
   text-align: center;
   width: 60%;
   margin: 0 auto;
-  text-decoration: none;
-  list-style-type: none;
   margin-top: -5em;
 }
 
-.error ul li{
+.error ul li, .listings ul, .error{
   list-style-type: none;
+}
+
+.error, .listings ul, .listings ul li p .maps{
+  text-decoration: none;
 }
 
 .listings{
@@ -122,15 +126,21 @@ footer .leftattr{
 
 .listings ul {
   display: inline-block;
-  list-style-type: none;
-  text-decoration: none;
   margin: 1em 1em 2em 3em;
   color: #777;
-  border:1px solid #666;
   font-family: 'Julius Sans One', sans-serif;
 }
 
 
+.listings ul:hover {
+  border-top:1px solid #666;
+  border-bottom: 1px solid #666;
+}
+
 .listings ul li p .maps{
-  color:red;
+  color:#188bc4;
+}
+
+.listings ul li p .maps:hover{
+  color:#7A942E;
 }
