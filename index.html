@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html ng-app="foursquare">
+  <head>
+    <meta charset=utf-8>
+    <title>Locator</title>
+    <link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheet/main.css">
+  </head>
+  <body ng-controller="foursquareController">
+    <section>
+      <div id="headingText">
+        <p><img src="img/pin2.png" alt"logo icon">Lost?</p> 
+      </div>
+
+      <div id="searchBar">
+        <form>
+          <input ng-model="search" type="search" name="search" id="search" placeholder='Enter Venue, Address or neighbourhood...' required>
+          <input type="submit" value"Search" id="submit" ng-click="submitForm()">
+        </form>
+      </div>
+
+      <div ng-show="confirm" class="error">
+        <li>Your Search did not match any place in our database</li> 
+          <li>Suggestions:</li>
+            <ul>
+              <li>Make sure that all words are spelled correctly.</li>
+              <li>Try another Venue, Address or neighbourhood.</li>
+              <li>Try fewer keywords.</li>
+            </ul>
+      </div>
+
+      <div class="listings">
+        <ul ng-repeat="item in results" id="options">
+          <li>
+            <p> NAME: {{ item.name }} </p>
+            <p> ADDRESS: {{ item.location.address }} {{ list.location.city}} {{", Lagos."}} </p>
+            <p> LATITUDE: {{ item.location.lat }} </p>
+            <p> LONGITUDE: {{ item.location.lng }} </p>
+            <p> MAP-SEARCH: <a ng-href="https://www.google.com.ng/maps/" class="maps">Click Here</a> </p> 
+            <p> VISITS: {{ item.stats.checkinsCount }} {{" Persons Have Visited Here"}} </p> 
+            <p> LIKES: {{ item.stats.usersCount }} {{"People Like This Place"}} </p> 
+            <p> CURRENTLY: {{ item.hereNow.summary }} </p>        
+          </li>
+        </ul>
+      </div>  
+
+    </section>
+    <footer>
+      <a href="http://foursquare.com"><img class="rightattr" src="img/ficon.png" alt="icon attributuion to Foursquare"></a>
+      <a href="https://angularjs.org/"><img class="leftattr" src="img/angularjs.png" alt="icon attribution to Angular"></a>
+    </footer>
+    <script type="text/javascript" src="script/angular.js"></script>
+    <script type="text/javascript" src="script/app.js"></script> 
+  </body>
+</html>
+
+

@@ -1,0 +1,136 @@
+body{
+  margin: 0 auto;
+  background: url('../img/flight2.png') no-repeat;
+  background-size: auto;
+  font-family: 'Josefin Slab', serif;
+}
+  /*
+======================================================
+
+              HEADER TEXT
+
+======================================================*/
+
+#headingText {
+  margin: 0 auto;
+  text-align: center;
+  line-height: 0.3em;
+  color:white;/*#582A72;*/
+  font-size: 5em;
+  font-family: 'Roboto Slab', serif;
+}
+
+section img {
+  margin-right: 0.5%; 
+  height: 4%;
+  width:auto; 
+}
+/*
+======================================================
+
+              SEARCH BAR
+
+======================================================*/
+
+#searchBar{
+  margin: 0 auto;
+  text-align: center;
+  margin: 10% 0 23.5% 0;
+  width: 100%;
+}
+
+#search, #submit{
+  height: 2.9em;
+  position: relative;
+  font-size: 1.3em;
+  font-family: 'Julius Sans One', sans-serif;
+  background:rgba(50, 50, 50, 0.2);
+}
+
+#search{
+  width: 40%;
+  font-weight: lighter;
+  border: 1px solid #dddddd;
+}
+
+#search:focus, #search:hover{
+  background:rgba(255, 255, 255, 0.8);/*#188bc4;*/
+  color: black;
+  border:1px solid #0f95d3;
+}
+
+#submit{
+  background:#188bc4;
+  color: #e6e6e6;
+  width: 8%;
+  border-radius: 2%;
+  border: 2px solid #dddddd;
+}
+
+#submit:hover{
+  background:#188bc4;
+  color:white;
+  font-weight: 900;
+  border: 2px solid #0f95d3;
+  border-radius: 8px;
+}
+
+footer .rightattr{
+  height: 5em;
+  width: auto;
+  margin: 0 auto;
+  float: right;
+  border: 3px solid #0f95d3;
+  border-radius: 100%
+}
+
+footer .leftattr{
+  height: 5em;
+  width: auto;
+  margin: 0 auto;
+  float: left;
+  border-radius: 100%
+}
+
+
+/*
+======================================================
+
+              RESULT FORM
+
+======================================================*/
+
+.error{
+  color: white;
+  font-size: 1.5em;
+  font-family: 'Josefin Slab', serif;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  text-decoration: none;
+  list-style-type: none;
+  margin-top: -5em;
+}
+
+.error ul li{
+  list-style-type: none;
+}
+
+.listings{
+  background:url('../img/blackmap.png');
+}
+
+.listings ul {
+  display: inline-block;
+  list-style-type: none;
+  text-decoration: none;
+  margin: 1em 1em 2em 3em;
+  color: #777;
+  border:1px solid #666;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+
+.listings ul li p .maps{
+  color:red;
+}
